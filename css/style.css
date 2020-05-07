@@ -19,7 +19,7 @@ a:hover
 }
 #header
 {
-	padding: 14px 7%;
+	padding: 10px 7%;
 	/*background: #fff;*/
 	position: fixed;
 	z-index: 997;
@@ -45,11 +45,19 @@ a:hover
 /*start banner area*/
 .banner
 {
-	background: url(../images/2.jpg) center no-repeat;
+	background: url(../images/3.jpg) center no-repeat;
 	min-height: 600px;
 	padding: 190px 0;
 	position: relative;
 	z-index: 0;
+    background-size: cover;
+}
+.banner-right img
+{
+        max-width: 500px;
+    position: absolute;
+    top: -160px;
+    right: -30px;
 }
 
 
@@ -107,6 +115,7 @@ a:hover
     bottom: 0;
     right: 0;
     background: rgba(0,0,0,.5);
+
     z-index: -1;
  }
  .banner h2 span
@@ -125,10 +134,30 @@ a:hover
  }
 .demo-icon-feature
 {
-    padding: 30px;
+        padding: 30px;
+    height: 310px;
+
     margin-bottom: 30px;
     position: relative;
-    transition: all .3s ease;
+    transition: all 2s ease;
+    overflow: hidden;
+}
+.demo-icon-feature:hover .icon
+{
+    width: 50px;
+}
+.v-hidden
+{
+    visibility: hidden;
+}
+.demo-icon-feature:hover .v-hidden
+{
+    visibility: visible;
+    font-size: 14px;
+}
+.demo-icon-feature:hover .desc
+{
+padding-top: 20px;
 }
 .demo-icon-feature:before
 {
@@ -191,6 +220,13 @@ a:hover
     padding: 40px 0 10px;
     font-size: 18px;
 }
+.demo-icon-feature:hover .desc
+{
+        font-size: 24px;
+    background: -webkit-linear-gradient(#fbb41b, #f5285c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .demo-icon-feature:before, .demo-icon-feature:after
 {
     
@@ -241,7 +277,7 @@ a:hover
 .demo-icon-feature:hover .icon
 {
     box-shadow: none;
-    background: #333;
+    /*background: #333;*/
 }
 .demo-icon-feature:hover .icon span
 {
@@ -347,6 +383,7 @@ a:hover
     color: #fff;
     line-height: 1.3em;
     position: relative;
+    margin-bottom: 30px;
  }
 .cta .left-content h2:after
 {
@@ -358,12 +395,12 @@ a:hover
     bottom: -7px;
     left: 0;
 }
-.cta .left-content p
+/*.cta .left-content p
 {
     margin: 30px 0;
     font-size: 14px;
     color: #777;
-}
+}*/
 .cta .left-content ul li
 {
     color: #e0e5ff;
@@ -443,15 +480,17 @@ a:hover
 .demo-footer-content p
 {
     font-style: italic;
-    font-size: 18px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-size: 24px;
     color: #fff;
 }
 .demo-footer-content h2
 {
-    font-size: 36px;
+    font-size: 15px;
     color: #fff;
-    line-height: 1.3em;
-    font-weight: 700;
+    line-height: 1.6em;
+    
 }
 .demo-footer-content .color-18
 {
@@ -545,4 +584,295 @@ a:hover
 .footer-social.color-2 li a:hover i
 {
     color:#f41863
+}
+
+/*our-pricing*/
+
+#our-pricing
+ {
+    background: url(../images/amazing_features.png);
+    background-size: cover;
+    margin: 50px 0;
+    padding: 100px 0 0;
+ }
+
+ .pricing-head
+ {
+    color: #777;
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
+    text-align: center;
+    padding-bottom: 15px;
+    
+ }
+ .pricing-head p
+ {
+        font-size: 28px;
+        margin-bottom: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+ }
+ .our-pricing-desc ul
+ {
+    list-style-type: none;
+    padding-left: 0;
+
+ }
+ .our-pricing-desc ul li
+ {
+    position: relative;
+    font-size: 14px;
+    padding: 10px 0;
+    color: #333;
+    
+    
+    
+ }
+ .our-pricing-desc ul li:before
+ {
+    content: "\f00c";
+    /*content: "\f00d";*/
+    font-family: 'font awesome 5 free';
+    font-weight: 900;
+    right: 0;
+    color: #777;
+    position: absolute;
+
+ }
+ .our-pricing-wrapper
+ {
+    border: 1px dotted #000000;
+    padding: 15px;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all .3s ease;
+ }
+ .our-pricing-wrapper:hover
+ {
+    background: #10121d;
+ }
+ .our-pricing-wrapper:hover .pricing-head p, .our-pricing-wrapper:hover .our-pricing-desc ul li, .our-pricing-wrapper:hover .our-pricing-desc ul li:before, .our-pricing-wrapper:hover .price, .our-pricing-wrapper:hover .sp
+ {
+    color: #fff;
+ }
+ .pricing-footer
+ {
+        color: #fff;
+
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+ }
+ .pricing-footer p
+ {
+    margin-bottom: 0;
+ }
+ .our-pricing-desc
+ {
+    text-align: center;
+ }
+.price
+{
+    font-size: 24px;
+    background: -webkit-linear-gradient(#fbb41b, #f5285c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.regular-price
+{
+    text-decoration: line-through;
+}
+
+.svg-icon
+{
+    height: 50px;
+}
+
+
+ @media (max-width: 991px)
+ {
+  .pricing .col-lg-4
+    {
+     margin-bottom: 30px;   
+    }
+ }
+ /* ############# Start Version3 Portfolio3 CSS ############# */
+.portfolio-area {
+  padding-bottom: 70px; }
+  @media (max-width: 1440px) {
+    .portfolio-area {
+      padding-left: 5%;
+      padding-right: 5%;
+      margin-bottom: 30px;
+      padding-top: 95px;
+      padding-bottom: 25px; } }
+  @media (max-width: 1024px) {
+    .portfolio-area {
+      margin-bottom: 0px;
+      padding-bottom: 40px;
+      padding-top: 60px; } }
+  .portfolio-area .heading {
+    line-height: 70px; }
+  @media (max-width: 767px) {
+    .portfolio-area .filters {
+      margin-bottom: 20px; } }
+  .portfolio-area .filters ul li {
+    font-size: 14px;
+    padding: 18px 28px; }
+    @media (max-width: 576px) {
+      .portfolio-area .filters ul li {
+        font-size: 12px;
+        padding: 20px 5px; } }
+    @media (max-width: 480px) {
+      .portfolio-area .filters ul li {
+        padding: 0px 5px; } }
+    .portfolio-area .filters ul li:after {
+      content: none; }
+  .portfolio-area .single-img {
+    padding: 0;
+    background: transparent;
+    margin-bottom: 50px;
+    text-align: center; }
+    .portfolio-area .single-img h4 {
+      font-size: 18px;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+    .portfolio-area .single-img img {
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+      @media (max-width: 767px) {
+        .portfolio-area .single-img img {
+          margin-top: 0; } }
+    .portfolio-area .single-img:hover {
+      box-shadow: none; }
+      .portfolio-area .single-img:hover img {
+        box-shadow: -10px 10px 20px #aeaeae; }
+      .portfolio-area .single-img:hover h4 {
+        color: #ff9400; }
+  .portfolio-area .filters {
+    text-align: center; }
+    .portfolio-area .filters ul {
+      padding: 0; }
+      .portfolio-area .filters ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 18px 30px;
+        cursor: pointer;
+        position: relative;
+        text-transform: uppercase;
+        color: #222;
+        font-size: 14px;
+        font-weight: 700;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s; }
+        @media (max-width: 992px) {
+          .portfolio-area .filters ul li {
+            padding: 18px 15px; } }
+        @media (max-width: 736px) {
+          .portfolio-area .filters ul li {
+            padding: 6px 6px; } }
+        .portfolio-area .filters ul li:hover, .portfolio-area .filters ul li.active {
+          color: #ff9400; }
+  .portfolio-area .filters-content {
+    margin-top: 50px; }
+    @media (max-width: 991px) {
+      .portfolio-area .filters-content {
+        margin-top: 0px; } }
+
+/* ############# End Version3 Portfolio3 CSS ############# */
+
+
+.mt-30
+{
+    margin-top: 30px;
+}
+.mt-80
+{
+    margin-top: 80px;
+}
+
+.portfolio-area .heading
+{
+    font-size: 60px;
+    font-weight: 800;
+    text-shadow: -15px 15px 25px rgba(174, 174, 174, 0.5);
+    text-transform: capitalize;
+}
+.portfolio-area .heading .fname
+{
+    color: #7134db;
+}
+.portfolio-area .heading .lname
+{
+    color: #ff9400;
+}
+
+
+/*chat-icon*/
+.chat-text
+{
+    display: none;
+    color: #e5316e;
+    position: relative;
+    font-weight: bold;
+    bottom: 66px;
+    right: 150px;
+    width: 140px;
+    height: 100%;
+    font-size: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    transition: all .5s ease;
+    background: -webkit-linear-gradient(#fbb41b, #f5285c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.chat-icon-wrapper:hover .chat-text
+{
+    display: block;
+
+}
+.chat-icon-wrapper:hover
+{
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+.chat-icon-wrapper
+{   
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+    transition: all .5s ease;
+    background: #4dc247;
+    overflow: visible!important;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    /*box-shadow: 2px 2px 6px rgba(0,0,0,0.4);*/
+    font-size: 28px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+.chat-icon
+{
+ 
+ 
+    width: 41px;
+    
+    fill: white;
+    height: 50px;
+    
+    border-radius: 50%;
+    line-height: 60px;
 }

@@ -61,7 +61,12 @@ $('.nav-menu li a[href^="#"]').on("click", function(e) {
 //------- Water Ripple  js --------//
 $(document).ready(function(){
   $('.banner').ripples({
-    resolution: 512,
+    resolution: 200,
+    dropRadius: 20,
+    perturbance: 0.04,
+  });
+  $('.our-pricing-wrapper').ripples({
+    resolution: 200,
     dropRadius: 20,
     perturbance: 0.04,
   });
@@ -90,19 +95,47 @@ var typewriter = new Typewriter(app, {
 
 typewriter
   .typeString("Web Developer")
-  .pauseFor(1000)
+  .pauseFor(0)
   .deleteAll()
   .typeString("Business Analyst")
-  .pauseFor(1000)
+  .pauseFor(0)
   .deleteAll()
   .typeString("Web Designer")
-  .pauseFor(1000)
+  .pauseFor(0)
   .deleteAll()
   .typeString("Content Writer")
-  .pauseFor(1000)
+  .pauseFor(0)
   .deleteAll()
   .start();
 
 
 
 
+
+ /* ---------------------------------------------
+            Isotope js Starts
+         --------------------------------------------- */
+  $(window).on("load", function() {
+    $(".work-filter ul li").on("click", function() {
+      $(".work-filter ul li").removeClass("active");
+      $(this).addClass("active");
+
+      var data = $(this).attr("data-filter");
+      $workGrid.isotope({
+        filter: data
+      });
+    });
+
+    if (document.getElementById("portfolio")) {
+      var $workGrid = $(".work-grid").isotope({
+        itemSelector: ".all",
+        percentPosition: true,
+        masonry: {
+          columnWidth: ".all"
+        }
+      });
+    }
+  });
+  /* ---------------------------------------------
+            Isotope js Ends
+         --------------------------------------------- */
