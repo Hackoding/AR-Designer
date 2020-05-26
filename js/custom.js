@@ -14,21 +14,33 @@
 //   $(".default-header").sticky({ topSpacing: 0 });
 // });
 
-/* -------------------------------------------------------------------
-        Header Scroll Class js
-     ------------------------------------------------------------------ */
 
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 100) {
-    $("#header").addClass("header-scrolled");
-  } else {
-    $("#header").removeClass("header-scrolled");
-  }
-});
 
-/* -------------------------------------------------------------------
-    Smooth Scroll js
- ------------------------------------------------------------------ */
+/*##################################################*/
+ 
+
+$(document).ready(function(){
+
+/*-----------------owl carousel-----------------*/
+    $(".owl-next").html("<i class='fas fa-arrow-right'></i>");
+    $(".owl-prev").html("<i class='fas fa-arrow-left'></i>");
+
+/*-----------------faq toggle-----------------*/
+    $('.faq-header a').on('click',function(){
+      $(this).find('.icon').toggleClass('fa-plus');
+    });    
+
+  });         
+
+/*################## Header Scroll Js ################################*/
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $("#header").addClass("header-scrolled");
+    } else {
+      $("#header").removeClass("header-scrolled");
+    }
+  });
+/*################## Smooth Scroll Js ################################*/
 $('.nav-menu li a[href^="#"]').on("click", function(e) {
   e.preventDefault();
   var target = this.hash;
@@ -46,24 +58,25 @@ $('.nav-menu li a[href^="#"]').on("click", function(e) {
       }
     );
 });
+/*################## On Scroll Top ################################*/
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 700) {
+        $('.scrollTop, .floating').addClass('active');
+    }
+    else {$('.scrollTop, .floating').removeClass('active');}
+})
 
+$(".scrollTop").click(function() {
+  $('html, body').animate({ scrollTop: 0 }, 'slow');
+  return false;
+});
 
-
-
-
-
-
-
-
-
-
-
-//------- Water Ripple  js --------//
+/*################## Water Ripple Js Start ################################*/
 $(document).ready(function(){
   $('.banner').ripples({
-    resolution: 200,
-    dropRadius: 20,
-    perturbance: 0.04,
+    resolution: 512,
+    dropRadius: 5,
+    perturbance: 0.01,
   });
   $('.our-pricing-wrapper').ripples({
     resolution: 200,
@@ -73,21 +86,20 @@ $(document).ready(function(){
 
   
   // Automatic drops
-  setInterval(function() {
-    var $el = $('.banner');
-    var x = Math.random() * $el.outerWidth();
-    var y = Math.random() * $el.outerHeight();
-    var dropRadius = 20;
-    var strength = 0.04 + Math.random() * 0.04;
+  // setInterval(function() {
+  //   var $el = $('.banner');
+  //   var x = Math.random() * $el.outerWidth();
+  //   var y = Math.random() * $el.outerHeight();
+  //   var dropRadius = 20;
+  //   var strength = 0.04 + Math.random() * 0.04;
 
-    $el.ripples('drop', x, y, dropRadius, strength);
-  }, 400);
+  //   $el.ripples('drop', x, y, dropRadius, strength);
+  // }, 400);
 });
+/*################## Water Ripple Js End ################################*/
 
 
-//------- Water Ripple  js --------//
-
-// typewriter
+/*################## Typewriter js Start ################################*/
 var app = document.getElementById("app");
 var typewriter = new Typewriter(app, {
   loop: true
@@ -107,15 +119,10 @@ typewriter
   .pauseFor(0)
   .deleteAll()
   .start();
+/*################## Typewriter js End ################################*/
 
-
-
-
-
- /* ---------------------------------------------
-            Isotope js Starts
-         --------------------------------------------- */
-  $(window).on("load", function() {
+/*################## Isotope js Starts ################################*/
+   $(window).on("load", function() {
     $(".work-filter ul li").on("click", function() {
       $(".work-filter ul li").removeClass("active");
       $(this).addClass("active");
@@ -136,6 +143,23 @@ typewriter
       });
     }
   });
-  /* ---------------------------------------------
-            Isotope js Ends
-         --------------------------------------------- */
+/*################## Isotope js Starts ################################*/
+
+/*################## Magnific Popup js Starts ################################*/
+  $(".img-gal").magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true
+    }
+  });
+
+  $(".play-btn").magnificPopup({
+    type: "iframe",
+    mainClass: "mfp-bg",
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: true
+  });
+  /*################## Magnific Popup js End ################################*/
+
+
