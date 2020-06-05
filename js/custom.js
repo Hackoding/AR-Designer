@@ -1,8 +1,19 @@
-
-
 $(document).bind("contextmenu",function(e){
   return false;
     });
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            // alert('not allowed');
+            return false;
+        } else {
+            return true;
+        }
+};
+
 // $(document).ready(function() {
 //   "use strict";
 
@@ -66,9 +77,9 @@ $('.menu li a[href^="#"]').on("click", function(e) {
 /*################## On Scroll Top ################################*/
   $(window).scroll(function() {
     if ($(window).scrollTop() > 700) {
-        $('.scrollTop, .floating').addClass('active');
+        $('.scrollTop').addClass('active');
     }
-    else {$('.scrollTop, .floating').removeClass('active');}
+    else {$('.scrollTop').removeClass('active');}
 })
 
 $(".scrollTop").click(function() {
@@ -166,6 +177,5 @@ typewriter
     fixedContentPos: true
   });
   /*################## Magnific Popup js End ################################*/
-
 
 
