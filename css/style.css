@@ -298,8 +298,8 @@ text-transform: none;
 }
 .banner-right figure, .banner-right figure span {
     display: inline-block;
-    width: 330px;
-    height: 330px;
+    width: 100%;
+    height: 440px;
     /*background: #fff;*/
     border-radius: 50%;
     text-align: center;
