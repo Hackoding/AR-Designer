@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+body {
+  font-family: Noto Sans JP;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7
+}
+
+#navbar {
+  background: blue;
+}
+
+.center {
+  text-align: center;
+}
+
+.title-big {
+  font-size: 40px;
+}
+
+.title-med {
+  font-size: 24px;
+}
+.right {
+  text-align: right;
+}
+
+.eighty {
+  width: 70%;
+  margin: auto;
+}
+
+.comment {
+  font-size: 22px;
+  padding: 4px;
+  padding-top: 12px;
+}
+
+.mania {
+  font-family: JoseFin Sans
+}
+
+.button-trans {
+  font-size: 24px;
+  text-decoration: none;
+  color: #1698df;
+  text-align: center;
+}
+
+#editor {
+  height: 75vh;
+  width: 96vw;
+  display: block;
+  margin: auto;
+  font-size: 16px;
+  padding: 8px;
+  font-family: monospace;
+}
+
+.mar10 {
+  margin-left: 10px;
+}
+
+.closed-button {
+  background: #3fb1ee;
+  padding: 4px;
+  color: white;
+  text-decoration: none;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 4px;
+}
+
+#project-name {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(228, 228, 228);
+  color: black;
+  padding: 4px;
+}
