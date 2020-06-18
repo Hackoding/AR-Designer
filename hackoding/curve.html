@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/**{
+			margin: 0;padding: 0
+		}*/
+		.container
+		{
+			width: 720px;
+			margin:auto;
+		}
+
+				.content
+				{
+				    height: 100vh;
+				    background: #111;
+					/*padding: 20px;*/
+					position: relative;
+				}
+				.curve-wrapper
+				{
+				    position: absolute;
+				    height: calc(100% - 200px);
+				    /*height: 100%;*/
+				    width: 100%;
+				    background: #2abbff;
+				}
+				.curve-wrapper .curve
+				{
+				    position: absolute;
+				    bottom: -200px;
+				    height: 200px;
+				    width: 100%;
+				    transform-origin: top;
+				}
+				.curve-wrapper .curve img
+				{
+				    max-width: 100%;
+				    max-height: 100%;
+				}
+				.section{margin: 40px;background: #cf2b44}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="section">
+			<div class="content">
+				<div class="curve-wrapper">
+					<div class="curve">
+						<img src="images/curve.png" alt="image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- <section>
+			<div class="curve">
+				<img src="images/curve.png" alt="image">
+			</div>
+		</section> -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	
+	<script>
+		var scroll = document.getElementsByClassName('curve');
+		 $(window).on('scroll', function () {
+        	var value = 1 + window.scrollY/-50;
+        	$(scroll).css("transform", `scaleY(${value})`);
+    	});
+
+	</script>
+</body>
+</html>
