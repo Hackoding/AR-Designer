@@ -44,20 +44,27 @@ $(document).ready(function(){
 
 /*-----------------faq toggle-----------------*/
     $('.faq-header a').on('click',function(){
-      $(this).find('.icon').toggleClass('fa-plus');
+      $(this).find('.icon').toggleClass("fa-angle-up");
     });    
 
   });         
+/*-----------------Active link switching-----------------*/
+  $(document).ready(function () {
+      $('.page-scroll').click(function(e) {
+        $(this).parent().addClass('active');
+          $(this).parent().siblings().removeClass('active');
+      });
+  });
 
 /*################## Header Scroll Js ################################*/
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 150) {
-      $("#header").addClass("header-scrolled");
+  // $(window).scroll(function() {
+  //   if ($(this).scrollTop() > 150) {
+  //     $("#header").addClass("header-scrolled");
 
-    } else {
-      $("#header").removeClass("header-scrolled");
-    }
-  });
+  //   } else {
+  //     $("#header").removeClass("header-scrolled");
+  //   }
+  // });
 /*################## Smooth Scroll Js ################################*/
 $('.nav-item a[href^="#"]').on("click", function(e) {
   e.preventDefault();
