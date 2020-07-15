@@ -1,3 +1,22 @@
+/*-----------------footer plus icon toggle-----------------*/
+ if ($(window).width() < 576) {
+    $(document).ready(function(){
+      $('.foot-wrap .title').on('click', function(){
+        $(this).next('ul').slideToggle();
+        $(this).find('.icon').toggleClass('fa-plus')
+      });
+    });
+  }
+if ($(window).width() < 991) {
+    $(document).ready(function(){
+      $('.navigation-toggler').on('click', function(){
+        $(".navigation").next('ul').slideToggle();
+        // $(this).find('.icon').toggleClass('fa-plus')
+      });
+    });
+  }  
+  
+  
 
 // $(document).bind("contextmenu",function(e){
 //   return false;
@@ -57,14 +76,14 @@ $(document).ready(function(){
   });
 
 /*################## Header Scroll Js ################################*/
-  // $(window).scroll(function() {
-  //   if ($(this).scrollTop() > 150) {
-  //     $("#header").addClass("header-scrolled");
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 150) {
+      $(".navbar").addClass("header-scrolled");
 
-  //   } else {
-  //     $("#header").removeClass("header-scrolled");
-  //   }
-  // });
+    } else {
+      $(".navbar").removeClass("header-scrolled");
+    }
+  });
 /*################## Smooth Scroll Js ################################*/
 $('.nav-item a[href^="#"]').on("click", function(e) {
   e.preventDefault();
@@ -189,5 +208,6 @@ typewriter
     fixedContentPos: true
   });
   /*################## Magnific Popup js End ################################*/
+
 
 
