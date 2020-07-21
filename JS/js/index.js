@@ -9,7 +9,7 @@ $(document).ready(function() {
       return false;
     } else {
       $.ajax({
-        method: 'GET',
+        method: 'POST',
         url: '//formspree.io/info@webdesig9er.com',
         data: $('#contact-form').serialize(),
         datatype: 'json'
