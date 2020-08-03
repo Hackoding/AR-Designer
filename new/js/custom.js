@@ -1,3 +1,22 @@
+
+/*-----------------Menu script-----------------*/
+(function($){
+  $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+    if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    var $subMenu = $(this).next(".dropdown-menu");
+    $subMenu.toggleClass('show');
+
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass("show");
+    });
+
+    return false;
+  });
+})(jQuery)
+
+
 /*-----------------footer plus icon toggle-----------------*/
  if ($(window).width() < 576) {
     $(document).ready(function(){
@@ -85,23 +104,23 @@ $(document).ready(function(){
     }
   });
 /*################## Smooth Scroll Js ################################*/
-$('.nav-item a[href^="#"]').on("click", function(e) {
-  e.preventDefault();
-  var target = this.hash;
-  $target = $(target);
-  $("html, body")
-    .stop()
-    .animate(
-      {
-        scrollTop: $target.offset().top 
-      },
-      900,
-      "swing",
-      function() {
-        window.location.hash = target;
-      }
-    );
-});
+// $('.nav-item a[href^="#"]').on("click", function(e) {
+//   e.preventDefault();
+//   var target = this.hash;
+//   $target = $(target);
+//   $("html, body")
+//     .stop()
+//     .animate(
+//       {
+//         scrollTop: $target.offset().top 
+//       },
+//       900,
+//       "swing",
+//       function() {
+//         window.location.hash = target;
+//       }
+//     );
+// });
 
 
 
