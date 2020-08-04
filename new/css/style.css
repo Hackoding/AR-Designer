@@ -165,14 +165,7 @@ ul{list-style:none;margin-bottom:0}
 .top-social li{color: #fff}
 .navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover,.navbar-light .navbar-nav .active > .nav-link,.navbar-light .navbar-nav .nav-link.active,.navbar-light .navbar-nav .nav-link.show,.navbar-light .navbar-nav .show > .nav-link{color:#ff4752}
 /*.nav-item.active .page-scroll{background-color:#56ce6a!important}*/
-@media (max-width: 991px)
-{
-	.top-links{padding: 0 80px}
-}
-@media (max-width: 767px)
-{
-	.top-links{padding: 0 15px}
-}
+
 @media(max-width: 640px)
 {
 	.top-links .top-social{display: none;}
@@ -188,7 +181,7 @@ ul{list-style:none;margin-bottom:0}
 /*----------------------------------------top menu----------------------------------------*/
 
 /*.menu-area .dropdown-toggle{white-space: inherit;}*/
-.navbar-light .navbar-toggler{border: none}
+.navbar-light .navbar-toggler{border: none;padding-right: 0}
 /*.menu-area button:focus{outline: 0}*/
 .dropdown-menu{padding:0;margin:0;border-radius:0;-webkit-box-shadow:none!important;box-shadow:none!important}
 .mainmenu a, .navbar-default .navbar-nav > li > a, .mainmenu ul li a , .navbar-expand-lg .navbar-nav .nav-link
@@ -368,7 +361,16 @@ ul{list-style:none;margin-bottom:0}
 	.navbar-light .navbar-nav .nav-link{padding:20px 10px;text-transform:uppercase;display:inline-block;letter-spacing:1px;font-weight:700;color:#fff}
 	.nav-item > .dropdown-menu:before{content:"";border:16px solid transparent;position:absolute;top:-31px;border-bottom-color:#fff;left:-1px;border-radius:3px}
 }
-
+@media (max-width: 991px)
+{
+	#header
+	{
+		box-shadow:0 2px 16px 0 rgb(255 255 255 / 28%);
+		z-index:2;
+		background: #131313;
+		padding: 0 15px!important; position:fixed;top:0;left:0;right:0;z-index:3;padding:0;transition:all .5s ease;animation:smoothScroll 1s forwards
+	}
+}
 @media (max-width: 480px)
 {
 	.navbar-brand img{height: 40px;}
@@ -410,12 +412,16 @@ ul{list-style:none;margin-bottom:0}
 .home_slider{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
 #particles-js,#particles-js-one,#particles-js-two,#particles-js-three,#particles-js-five{width:100%;height:587px;overflow:hidden;background-size:cover;background-repeat:no-repeat}
 .hero_slider{height: 450px;}
-/*hero_slider_wrapper*/
+.hero_slider_wrapper
+{
+	height: 470px
+}
 .hero_slider_video{
 	background:#f5f8ff url(../images/bannertoon.jpg) center left no-repeat;
 	/*z-index:0;*/
 	height: 600px;
     background-attachment: fixed;
+    background-size: cover;
     width: 100%;
     position: relative;
     top: -130px;
