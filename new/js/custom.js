@@ -97,10 +97,10 @@ $(document).ready(function(){
 /*################## Header Scroll Js ################################*/
   $(window).scroll(function() {
     if ($(this).scrollTop() > 150) {
-      $(".navbar").addClass("header-scrolled");
+      $("#header").addClass("header-scrolled");
 
     } else {
-      $(".navbar").removeClass("header-scrolled");
+      $("#header").removeClass("header-scrolled");
     }
   });
 /*################## Smooth Scroll Js ################################*/
