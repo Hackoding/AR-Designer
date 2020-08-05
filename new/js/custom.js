@@ -138,53 +138,54 @@ $(".scrollTop").click(function() {
 });
 
 /*################## Water Ripple Js Start ################################*/
-$(document).ready(function(){
-  $('.class').ripples({
-    resolution: 512,
-    dropRadius: 5,
-    perturbance: 0.01,
-  });
-  // $('.home_slider1_bg').ripples({
-  //   resolution: 200,
-  //   dropRadius: 20,
-  //   perturbance: 0.04,
-  // });
+// $(document).ready(function(){
+//   $('.class').ripples({
+//     resolution: 512,
+//     dropRadius: 5,
+//     perturbance: 0.01,
+//   });
+//   //
+//   $('.home_slider1_bg').ripples({
+//     resolution: 200,
+//     dropRadius: 20,
+//     perturbance: 0.04,
+//   });
 
   
-  // Automatic drops
-  // setInterval(function() {
-  //   var $el = $('.class');
-  //   var x = Math.random() * $el.outerWidth();
-  //   var y = Math.random() * $el.outerHeight();
-  //   var dropRadius = 20;
-  //   var strength = 0.04 + Math.random() * 0.04;
+//   // Automatic drops
+//   setInterval(function() {
+//     var $el = $('.class');
+//     var x = Math.random() * $el.outerWidth();
+//     var y = Math.random() * $el.outerHeight();
+//     var dropRadius = 20;
+//     var strength = 0.04 + Math.random() * 0.04;
 
-  //   $el.ripples('drop', x, y, dropRadius, strength);
-  // }, 400);
-});
+//     $el.ripples('drop', x, y, dropRadius, strength);
+//   }, 400);
+// });
 /*################## Water Ripple Js End ################################*/
 
 
 /*################## Typewriter js Start ################################*/
-var app = document.getElementById("app");
-var typewriter = new Typewriter(app, {
-  loop: true
-});
+// var app = document.getElementById("app");
+// var typewriter = new Typewriter(app, {
+//   loop: true
+// });
 
-typewriter
-  .typeString("Web Developer")
-  .pauseFor(0)
-  .deleteAll()
-  .typeString("Business Analyst")
-  .pauseFor(0)
-  .deleteAll()
-  .typeString("Web Designer")
-  .pauseFor(0)
-  .deleteAll()
-  .typeString("Content Writer")
-  .pauseFor(0)
-  .deleteAll()
-  .start();
+// typewriter
+//   .typeString("Web Developer")
+//   .pauseFor(0)
+//   .deleteAll()
+//   .typeString("Business Analyst")
+//   .pauseFor(0)
+//   .deleteAll()
+//   .typeString("Web Designer")
+//   .pauseFor(0)
+//   .deleteAll()
+//   .typeString("Content Writer")
+//   .pauseFor(0)
+//   .deleteAll()
+//   .start();
 /*################## Typewriter js End ################################*/
 
 /*################## Isotope js Starts ################################*/
@@ -212,20 +213,20 @@ typewriter
 /*################## Isotope js Starts ################################*/
 
 /*################## Magnific Popup js Starts ################################*/
-  $(".img-gal").magnificPopup({
-    type: "image",
-    gallery: {
-      enabled: true
-    }
-  });
+  // $(".img-gal").magnificPopup({
+  //   type: "image",
+  //   gallery: {
+  //     enabled: true
+  //   }
+  // });
 
-  $(".play-btn").magnificPopup({
-    type: "iframe",
-    mainClass: "mfp-bg",
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: true
-  });
+  // $(".play-btn").magnificPopup({
+  //   type: "iframe",
+  //   mainClass: "mfp-bg",
+  //   removalDelay: 160,
+  //   preloader: false,
+  //   fixedContentPos: true
+  // });
   /*################## Magnific Popup js End ################################*/
 
 
