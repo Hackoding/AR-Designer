@@ -141,7 +141,7 @@ ul{list-style:none;margin-bottom:0}
 .top-links{height:45px;line-height:45px;z-index:3;border-bottom: 1px solid #615c5c;justify-content: space-between;padding:  0 10px}
 .top-links ul li{display:inline-block;margin-right:10px;}
 .top-links ul li:last-child{margin-right: 0}
-.top-links ul li a{color:#fff;font-size:14px}
+.top-links ul li a{color:#fff;font-size:10px}
 .top-links ul li a.facebook:hover{color:#1877f2}
 .top-links ul li a.twiter:hover{color:#1da1f2}
 .top-links ul li a.youtube:hover{color:red}
@@ -172,7 +172,7 @@ ul{list-style:none;margin-bottom:0}
 	.top-links
 	{
 		justify-content: center!important;
-		background: brown;
+		background: #1c4484;
 	}
 }
 
@@ -182,7 +182,7 @@ ul{list-style:none;margin-bottom:0}
 }
 @media(max-width: 411px)
 {
-	.top-links .social-contact .mail{display: none;}
+	/*.top-links .social-contact .mail{display: none;}*/
 }
 
 /*================================================
