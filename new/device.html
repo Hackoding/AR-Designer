@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- =============== CSS Files ==================== -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<style>
+			.vertical-center
+			{
+				padding-top: 90px;
+			    transform: translate(-50%,0%);
+			    position: absolute;
+			    left: 50%;
+			    top: 0;
+			}
+			.devices-panel
+			{
+			    position: absolute;
+				    top: 0;
+				    width: 100%;
+				    background: #333;
+				    z-index: 999;
+				    padding: 10px;
+				    color: #fff;
+			}
+
+			.device-icon
+			{
+				display: inline-block;
+			}
+		</style>
+	
+</head>
+<body>
+	<!-- <iframe class="vertical-center" id="iframe"  frameborder="0" src="https://ardesigner.cf/" scrolling="yes"></iframe> -->
+	<iframe class="vertical-center" id="iframe"  frameborder="0" src="index.html" scrolling="yes"></iframe>
+	<div class="devices-panel text-center hidden-mobile">
+		<div class="icon device-icon" id="desktop" data-width="100%">
+			<p>100%</p>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>
+			</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="992">
+			<p>992</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="991">
+			<p>991</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="800">
+			<p>800</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon" id="tablet" data-width="768">
+			<p>768</p>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tablet"><rect x="4" y="2" width="16" height="20" rx="2" ry="2" transform="rotate(180 12 12)"></rect><line x1="12" y1="18" x2="12" y2="18"></line></svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="767">
+			<p>767</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="640">
+			<p>640</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="575">
+			<p>575</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="480">
+			<p>480</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="414">
+			<p>414</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="411">
+			<p>411</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="375">
+			<p>375</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="360">
+			<p>360</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+		<div class="icon device-icon active" id="mobile" data-width="320">
+			<p>320</p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line>
+				</svg>
+		</div>
+	</div>
+
+<!-- =============== Page Scripts ==================== -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- <script src="js/jquery-2.2.4.min.js"></script> -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+<script>
+
+	$(document).ready(function() {
+  adjustIframe()
+  $(window).resize(adjustIframe)
+
+  $('.device-icon').click(function() {
+    $('.device-icon').removeClass('active')
+    $(this).addClass('active')
+    $("#iframe").attr("width", $(this).data('width'))
+  })
+})
+function adjustIframe() {
+  iframe_height = $(window).height() + "px"
+  $("#iframe").attr("height", iframe_height)
+}
+</script>
+</body>
+</html>
