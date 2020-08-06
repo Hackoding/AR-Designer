@@ -1,3 +1,20 @@
+/*-----------------footer plus icon toggle-----------------*/
+ if ($(window).width() < 576) {
+    $(document).ready(function(){
+      $('.foot-wrap .title').on('click', function(){
+        $(this).next('ul').slideToggle();
+        $(this).find('.icon').toggleClass('fa-plus');
+      });
+    });
+  }
+if ($(window).width() < 991) {
+    $(document).ready(function(){
+      $('.navigation-toggler').on('click', function(){
+        $(".navigation").next('ul').slideToggle();
+      });
+    });
+  }  
+
 
 /*-----------------Menu script-----------------*/
 (function($){
@@ -17,23 +34,7 @@
 })(jQuery)
 
 
-/*-----------------footer plus icon toggle-----------------*/
- if ($(window).width() < 576) {
-    $(document).ready(function(){
-      $('.foot-wrap .title').on('click', function(){
-        $(this).next('ul').slideToggle();
-        $(this).find('.icon').toggleClass('fa-plus')
-      });
-    });
-  }
-if ($(window).width() < 991) {
-    $(document).ready(function(){
-      $('.navigation-toggler').on('click', function(){
-        $(".navigation").next('ul').slideToggle();
-        // $(this).find('.icon').toggleClass('fa-plus')
-      });
-    });
-  }  
+
   
   
 
@@ -96,7 +97,7 @@ $(document).ready(function(){
 
 /*################## Header Scroll Js ################################*/
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 150) {
+    if ($(this).scrollTop() > 200) {
       $("#header").addClass("header-scrolled");
 
     } else {
