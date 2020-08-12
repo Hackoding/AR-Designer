@@ -230,5 +230,9 @@ $(".scrollTop").click(function() {
   // });
   /*################## Magnific Popup js End ################################*/
 
+  $("#phone, #phone2").intlTelInput({
+    preferredCountries: ['in', 'jp', 'us', 'cn', 'ru'],
+    // utilsScript: "../js/utils.js"
+  });
 
 
